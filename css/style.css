@@ -515,7 +515,7 @@ label #cancel{
     }
 }
 /* about section................... */
-#about{
+/*#about{
     /* border: 2px solid red; */
     min-height: 100vh;
     width: 100%;
@@ -652,4 +652,4 @@ label #cancel{
 }
 .toolbar-item .copy-to-clipboard-button{
     margin-right: 14px;
-}
+}*/
