@@ -4,271 +4,307 @@
     padding: 0%;
     box-sizing: border-box;
     text-decoration: none;
-    /* z-index: ; */
+    list-style: none;
 }
 body{
     width: 100%;
     height: 100vh;
 }
-.max-width{
-    /* border: 2px solid white; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 80px;
-    height: 500px;
 
-}
-
-.navbar{
-    /* border: 2px solid blue; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
+nav{
+    overflow: hidden;
+    height: 63px;
     width: 100%;
-    /* padding: 5px 0; */
     background: #111;
     font-family: 'Ubuntu',sans-serif;
-    z-index: 1;
 }
-/* .navbar::before{
-    content: "";
-    background-color: #111;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.1;
-}  */
- /* .navbar .max-widths{
-    border: 2px solid white;
-    padding: 0 10px;
-    width: 100%;
-    margin: 20p;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
-.navbar .logo{
-    /* border: 2px solid red; */
-    margin-left: 16px;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
-    /* margin-left: 2px; */
+label.logo{
+    line-height: 60px;
+    padding: 0 50px;
+    margin-left: 20px;
 }
-.navbar .logo a{
+nav .logo a{
     color: #fff;
     font-size: 35px;
     font-weight: 600;
 }
-.navbar .menu ul{ 
-    /* border: 2px solid yellow; */
-    display: flex;
-    margin: 0px;
-    /* justify-content: flex-end; */
-    /* margin-right: 2px; */
+nav  ul{ 
+    overflow: hidden;
+    float: right;
+    margin-right: 20px;
 }
-.navbar .menu li{
-    list-style: none;
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 15px;
+    
 }
-.navbar .menu li a{
-    /* display: block; */
+nav ul li a{
+    position: relative;
     color: #fff;
     font-size: 25px;
+    padding: 7px 13px;
+    border-radius: 3px;
     font-weight: 500;
-    margin-right: 75px;
 }
-.navbar .menu li a:hover{
+nav  li a:hover{
     color: rgb(112, 112, 200);
-    /* text-shadow: 0px 10px 20px rgb(112, 112, 177); */
 }
-.navbar .menu .current{
+nav  .current{
     color: rgb(112, 112, 200);
 }
 samp{
     color: rgb(112, 112, 200);
 }
+label #btn,
+label #cancel{
+    color: white;
+    font-size: 25px;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
 
-/* Home section */
+
+/* Home section.......................................... */
 #home{
-    /* border: 2px solid white; */
-    /* display: flex; */
-    font-family: 'ubuntu', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("/assets/img/Untitled.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    /* background-color: #222; */
-    height: 100vh;
-    width: 100%;
-    color: black;
-    min-height: 500px;
-
-}
-
-.home .home-content{
-    /* border: 2px solid white; */
-    position: relative;
-    /* top: 100px; */
-    align-items: center;
-    font-family: 'Ubuntu',sans-serif;
-}
-
-.home .home-content img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* position: relative; */
-}   
-
-.home .home-content .text-1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    /* width: 100%; */
+    width: 100%;
+    min-height: 100vh;
+    color: black;
+    font-family: 'ubuntu', sans-serif;
+}
+
+#home .home-content{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 50vh;
+    padding: 50px;
+    /* box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2); */
+    /* position: relative; */
+    /* top: 100px; */
+    /* align-items: center; */
+    font-family: 'Ubuntu',sans-serif;
+}
+#home .home-content:hover{
+    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#home .home-content .text-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-size: 30px;
 }
-.home .home-content .text-2{
-    /* margin: auto; */
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-size: 70px;
-    font-weight: 600;
-    /* margin-left: -3px; */
-}
-.home .home-content .text-3{
+#home .home-content .text-2{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: absolute; */
-    /* left: 415px; */
-    /* margin: auto; */
+    width: 100%;
+    font-size: 70px;
+    font-weight: 600;
+}
+#home .home-content .text-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-size: 45px;
-    /* margin: 5px 0; */
 }
-.home .home-content .text-3 span{
-    /* font-size: 42px; */
+#home .home-content .text-3 span{
     font-weight: 600;
     color: rgb(112, 112, 200);
 }
 
-/* contract Page */
-.contact-section{
-    background-image: url("/assets/img/contract.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+/*........................................... contract Page....................................... */
+#contact{
+    /* z-index: -2; */
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    position: relative;
+    min-height: 100vh;
     width: 100%;
-    background-color: #222;
+    padding: 50px 100px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
-.container-contract{
-    width: 90%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0px 0 20px #FFFFFF90;
-    background-color: #fff;
-    border-radius: 8px;
-    margin-bottom: 20px;
+#contact .content{
+    max-width: 800px;
+    text-align: center;
 }
-.form-group{
+#contact .content h2{
+    font-size: 36px;
+    font-weight: 800;
+    /* text-decoration: underline; */
+    color: #111;
+}
+#contact .content p{
+    font-weight: 300;
+    color: #111;
+}
+.container{
     width: 100%;
-    margin-top: 20px;
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
-.form-group input,
-.form-group textarea{
-    width: 100%;
-    padding: 5px;
-    font-size: 18px;
-    border: 1px solid #222;
-    margin-top: 5px;
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }
-textarea{
-    resize: vertical;
+.container .contactInfo .box{
+    position: relative;
+    padding: 30px 0;
+    display: flex;
 }
-button[type="submit"]{
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 20px;
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     font-size: 24px;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    margin-top: 10px;
-    background-color: #111;
+    background: white;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    color: #111;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box  .text  h3{
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(112, 112, 200);
+}
+.contactForm{
+    /* height: 60vh; */
+    /* border: 2px solid black; */
+    box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #111;
+    font-weight: 800;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 2px solid #111;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #444;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span{
+    color: red;
+    font-size: 14px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: red;
+    font-size: 14px;
+    transform: translateY(-35px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: rgb(112, 112, 200);
     color: #fff;
-}
-button[type="submit"]:hover{
-    color: #0f0;
-    text-shadow: 120px 30px 120px #0f0;
-}
-#status{
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
+    border: none;
+    cursor: pointer;
     padding: 10px;
-    margin: 0 auto;
-    color: black;
-    font-size: 25px;
-    border-radius: 9px;
+    font-size: 18px;
 }
-#status.success{
-    background-color: white;
-    box-shadow: 0px 0 20px #FFFFFF90;
-    animation: status 4s ease forwards;
-}
-#status.error{
-    background-color: red;
-    color: white;
-    animation: status 4s ease forwards;
-}
-@keyframes status{
-    0%{
-        opacity: 1;
-        pointer-events: all;
+@media (max-width: 990px){
+    #contact{
+        padding: 50px;
     }
-    90%{
-        opacity: 1;
-        pointer-events: all;
+    #contact .content h2{
+        font-size: 28px;
     }
-    100%{
-        opacity: 0;
-        pointer-events: none;
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        font-size: 15px;
+    }
+    .container .contactInfo .box  .text  h3{
+        font-size: 17px;
+    }
+    .container .contactInfo .box .icon{
+        height: 50px;
+        width: 40px;
+        font-size: 20px;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm{
+        width: 100%;
+    }
+    .contactForm h2{
+        font-size: 28px;
     }
 }
 
-/* footer..............................................  */
+
+
+/* ......................................................footer..............................................  */
 footer{
-    /* display: flex; */
     background-color: #111;
     height: auto;
     width: 100%;
     font-family: "open sans";
-    padding-top: 10px;
-    padding-bottom: 5px;
+    margin-top: 40px;
+    padding-top: 8px;
+    padding-bottom: 5px; 
     color: white;   
 }
 .footer-content{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column; */
     text-align: center;
     margin: 0px;
     padding: 0px;
@@ -276,34 +312,28 @@ footer{
 .footer-content p{
     color: rgb(112, 112, 200);
     max-width: 500px;
-    /* margin: auto; */
     line-height: 28px;
     font-size: 22px;
     font-weight: bolder;
-    /* text-decoration: underline; */
 }
 .footer-content .socials{
     display: flex;
     align-items: center;
     justify-content: center;
     list-style: none;  
-    margin: 0rem 0 -3px 0;
 }
 .footer-content .socials li{
-    /* padding: 10px; */
     margin: 5px;
 }
 
 .footer-content .socials li a{
     font-size: 20px;
-    /* color: red; */
     color: #fff;
 }
 .footer-content .socials li a:hover{
     color: rgb(112, 112, 200);
 }
 .footer-bottom{
-    /* background-color: black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,110 +351,98 @@ footer{
     font-size: 22px;
 }
 
-label #btn,
-label #cancel{
-    color: white;
-    font-size: 20px;
-    float: right;
-    /* line-height: 1px; */
-    margin-right: 40px;
-    margin-top: 10px;
-    cursor: pointer;
-    display: none;
-}
-#check{
-    display: none;
-}
 
-/* Media query.............................. */
+/* .............................................Responsive........................................................ */
 
-/* @media (max-width: 650px) {
-    label #btn{
-        display: block;
-    }
-    .menu{
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background: #222;
-        top: 80px;
-        left: 0;
-        text-align: center;
-    }
-    .max-widths .menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 30px 0;
-
-        line-height: 50px;
-    }
-    nav .menu a{
-        font-size: 10px;
-    }
-    .home-content{
-        z-index: -1;
-    }
-    footer{
-        z-index: -1;
-    }
-} */
 @media (max-width: 450px){    
+
+    /* ..................................................home section.................. */
     .home{
-        /* border: 2px solid green; */
         display: flex;
     }
-    .home .max-width{
-        /* border: 2px solid white; */
-        width: 100vw;
+    #home .max-width{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #home .max-width .home-content{
-        /* border: 2px solid yellow; */
-        display: inline-flex;
+        box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+        width: 90vw;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* width: 100vw; */
     }
     #home .max-width .home-content .text-1{
         font-size: 18px;
-        /* border: 2px solid white; */
         width: 100vw;
     }
     #home .max-width .home-content .text-2{
         font-size: 22px;
-        /* border: 2px solid white; */
         width: 100vw;
     }
     #home .max-width .home-content .text-3{
         font-size: 26px;
-        /* border: 2px solid white; */
         width: 100vw;
     }
-    #navbar{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* width: 100vw; */
+
+
+/* ........................................................For nav Bar................................................... */
+    nav{
+        width: 100%;
+        background: #111;
     }
-    #navbar .logo{
-        margin-left: 0px;
-        margin-top: 6px;
-        margin-bottom: 6px;
+    nav .logo{
+        padding: 0px 5px;
     }
-    #navbar .logo a{
+
+    nav .logo a{
         font-size: 25px;
     }
-    #navbar .menu ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    label #btn{
+        display: block;
     }
-    #navbar .menu ul li a{
-        font-size: 20px;
-        /* margin-right: 28px; */
-        margin: 2px 18px 2px 20px;
+    nav ul{
+        z-index: 100;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 50%;
+        min-height: 100vh;
+        background: #111;
+        top: 40px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 18px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+    
+    /*............................................................ For footer................................. */
+    footer{
+        margin-top: 40px;
+    }
+    .footer-content{
+
+        padding: 0px !important;
     }
     .footer-bottom p{
         font-size: 15px;
@@ -436,149 +454,444 @@ label #cancel{
         font-size: 18px;
     }
     .footer-content .socials li a{
-        font-size: 17px;
+        font-size: 18px;
         padding-left: 3px;
     }
+
+    /* ........................................For about.................................................  */
+    #about .about-width{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+    }
+    #about .about-width h2{
+        font-size: 25px;
+    }
+    #about .about-width .about-content1{
+        font-size: 12px;
+        box-shadow: none !important;
+        width: 100%;
+        padding-top: 0px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-bottom: 0px !important;
+        text-align: justify;
+    }
+    
+    #about .about-width .skills{
+        font-size: 16px;
+        z-index: -1 !important;
+        box-shadow: none !important;
+        width: 100%;
+        margin-top: 10px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        margin-right: 0px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-bottom: 40px !important;
+        /* padding-left: 30px; */
+        /* padding-right: 30px; */
+    }
+    #about .skills .right .info span{
+        font-size: 14px !important;
+        font-weight: 300 !important;
+    }
+        /* ========================for code=================== */
+        .code-section ol h2{
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .code-section .language-c{
+            width: 95vw !important;
+        }
+        .code-section code{
+            font-size: 12px;
+        }
+        .toolbar-item .copy-to-clipboard-button{
+            margin-right: 5px !important;
+        }
+    
 }
-@media (min-width: 450px) and (max-width: 700px){    
+@media (min-width: 450px) and (max-width: 750px){  
+
+    /* .........................................For home ..........................................   */
     .home{
-        /* border: 2px solid green; */
         display: flex;
     }
-    .home .max-width{
-        /* border: 2px solid white; */
-        width: 100vw;
+    #home .max-width{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #home .max-width .home-content{
-        /* border: 2px solid yellow; */
-        display: inline-flex;
+        box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+        width: 70%;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* width: 100vw; */
     }
     #home .max-width .home-content .text-1{
-        font-size: 26px;
-        /* border: 2px solid white; */
+        font-size: 32px;
         width: 100vw;
     }
     #home .max-width .home-content .text-2{
-        font-size: 30px;
-        /* border: 2px solid white; */
+        font-size: 46px;
         width: 100vw;
     }
     #home .max-width .home-content .text-3{
-        font-size: 32px;
-        /* border: 2px solid white; */
+        font-size: 40px;
         width: 100vw;
     }
-    #navbar{
+
+    /* ...........................................for navbar....................................... */
+    nav{
+        background: #111;
+    }
+    nav .logo{
+        display: block;
+        float: left;
+        padding: 0px 5px;
+    }
+    
+    nav .logo a{
+        font-size: 34px;
+    }
+    label #btn{
+        display: block;
+        font-size: 32px;
+    }
+    nav ul{
+        z-index: 100;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        /* width: 100vw; */
-    }
-    #navbar .logo{
-        margin-left: 0px;
-        margin-top: 6px;
-        margin-bottom: 6px;
-    }
-    #navbar .logo a{
-        font-size: 30px;
-    }
-    #navbar .menu ul{
-        display: flex;
         justify-content: center;
-        align-items: center;
-        margin-bottom: 4px;
+        position: absolute;
+        width: 50%;
+        height: 102%;
+        background: #111;
+        top: 58px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
     }
-    #navbar .menu ul li a{
-        font-size: 25px;
-        margin: 2px 50px 2px 50px;
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
     }
+    nav ul li a{
+        font-size: 26px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+
+    /* ...................................................for footer.............................................../ */
     .footer-bottom p{
-        font-size: 20px;
+        font-size: 23px;
     }
     .footer-bottom p span{
-        font-size: 21px;
+        font-size: 24px;
     }
     .footer-content p{
-        font-size: 18px;
+        font-size: 23px;
     }
     .footer-content .socials{
         margin-top: 1px;
     }
     .footer-content .socials li a{
-        font-size: 17px;
+        font-size: 23px;
         padding-left: 3px;
     }
+    /* .............................................for contact....................................................*/
+    #contact{
+        padding: 50px;
+    }
+    #contact .content h2{
+        font-size: 28px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        font-size: 15px;
+    }
+    .container .contactInfo .box  .text  h3{
+        font-size: 17px;
+    }
+    .container .contactInfo .box .icon{
+        height: 50px;
+        width: 40px;
+        font-size: 20px;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm{
+        width: 100%;
+    }
+    .contactForm h2{
+        font-size: 28px;
+    }
+    /* ...........................................for about........................................  */
+    #about .skills{
+        z-index: -1;
+    }
+    #about .about-width h2{
+        font-size: 25px;
+    }
+    #about .about-width .about-content1{
+        box-shadow: none !important;
+        width: 100%;
+        padding-top: 0px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        padding-bottom: 0px !important;
+        text-align: left;
+    }
+    
+    #about .about-width .skills{
+        z-index: -1 !important;
+        box-shadow: none !important;
+        width: 100%;
+        margin-top: 10px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        margin-right: 0px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-bottom: 40px !important;
+    }
+    /* ========================for code=================== */
+    .code-section ol h2{
+        display: flex;
+        justify-content: center;
+        font-size: 19px;
+    }
+    .code-section .language-c{
+        width: 95vw !important;
+    }
 }
-/* about section................... */
-/*#about{
-    /* border: 2px solid red; */
+@media (min-width: 750px) and (max-width: 990px){  
+
+    /* ...................................................For home ....................................................   */
+    .home{
+        display: flex;
+    }
+    #home .max-width{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #home .max-width .home-content{
+        box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+        width: 65vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #home .max-width .home-content .text-1{
+        font-size: 38px;
+        width: 100vw;
+    }
+    #home .max-width .home-content .text-2{
+        font-size: 54px;
+        width: 100vw;
+    }
+    #home .max-width .home-content .text-3{
+        font-size: 48px;
+        width: 100vw;
+    }
+
+    /* .............................................for navbar.........................................................../ */
+    nav{
+        overflow: hidden;
+        background: #111;
+    }
+    nav .logo{
+        display: block;
+        float: left;
+        padding: 0px 5px;
+    }
+    
+    nav .logo a{
+        font-size: 34px;
+    }
+    label #btn{
+        font-size: 34px;
+        display: block;
+    }
+    nav ul{
+        z-index: 100;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 50%;
+        min-height: 101%;
+        background: #111;
+        top: 58px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 36px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+        font-size: 34px;
+    }
+        /* ........................................................for contact...............................................*/
+        #contact{
+            padding: 50px;
+        }
+        #contact .content h2{
+            font-size: 28px;
+        }
+        .container .contactInfo{
+            font-size: 15px;
+        }
+        .container .contactInfo .box{
+            display: flex;
+            justify-content: center;
+            padding: 20px 20px;
+        }
+        .container .contactInfo .box  .text  h3{
+            font-size: 17px;
+        }
+        .container .contactInfo .box .icon{
+            height: 50px;
+            width: 40px;
+            font-size: 20px;
+        }
+        .container .contactInfo{
+            margin-bottom: 40px;
+            flex-direction: row;
+        }
+        .container .contactInfo,
+        .contactForm{
+            width: 100%;
+        }
+        .contactForm h2{
+            font-size: 28px;
+        }
+
+    /*........................................... for footer..................................................................*/
+    .footer-bottom p{
+        font-size: 22px;
+    }
+    .footer-bottom p span{
+        font-size: 23px;
+    }
+    .footer-content p{
+        font-size: 20px;
+    }
+    .footer-content .socials{
+        margin-top: 1px;
+    }
+    .footer-content .socials li a{
+        font-size: 21px;
+        padding-left: 3px;
+    }
+    /* ....................................for about..............................................  */
+    #about .skills{
+        z-index: 0;
+    }
+    /* ========================for code==================== */
+    .code-section .language-c{
+        width: 85vw !important;
+    }
+    .code-section ol h2{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+/* .......................................about section........................................... */
+#about{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-size: 100%;
+    color: #111;
     min-height: 100vh;
     width: 100%;
-    background-color: #fff;
-    padding-top: 140px;
+    /* background-color: #fff; */
+    padding-top: 85px;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     font-family: 'ubuntu', sans-serif;
-    /* flex-direction: column; */
 }
 .about .title{
-    /* border: 2px solid black; */
     text-align: center;
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
-    /* display: flex;
-    justify-content: center; */
     font-family: 'ubuntu', sans-serif;
 }
-.about .title::before{
-    content: "";
-    position: absolute;
-    top: 207px;
-    left: 50%;
-    width: 180px;
-    height: 3px;
-    background: #111;
-    transform: translateX(-50%);
-}
-.about .title::after{
-    content: " who i am ";
-    position: absolute;
-    top: 190px;
-    left: 50%;
-    font-size: 22px;
-    color: rgb(112, 112, 200);
-    padding: 5px;
-    background: #fff;
-    transform: translateX(-50%);
-    /* z-index: -1; */
-}
+
 #about .about-content1{
-    /* border: 2px solid green; */
     padding-top: 0px;
     padding-right: 0px;
     padding-left: 50px;
+    padding-bottom: 0px;
     text-align: justify;
     width: 52%;
     font-size: 19px;
 }
+#about .about-content1:hover{
+    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 50px;
+    padding-bottom: 15px;
+}
 #about .skills{
-    /* border: 2px solid red; */
     position: relative;
     float: right;
     padding-top: 0px;
     padding-right: 50px;
     padding-left: 0px;
-    /* text-align: justify; */
     width: 52%;
     font-size: 19px;
+}
+#about .skills:hover{
+    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+    margin-right: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
 }
 
 #about .skills .right .line{
@@ -594,18 +907,18 @@ label #cancel{
     font-size: 19px;
 }
 #about .skills .right .bars{
-    background-color: lightgray;
+    background-color: black;
     height: 5px;
     width: 100%;
 }
 #about .skills .right .bars::before{
-    content: '';
+    content:"";
     position: absolute;
     height: 5px;
     background-color: rgb(112, 112, 200);
 }
 #about .skills .right .html::before{
-    width: 80%;
+    width: 75%;
 }
 #about .skills .right .css::before{
     width: 60%;
@@ -620,15 +933,22 @@ label #cancel{
  
 /* code section........................... */
 .code-section{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     display: flex;
     justify-content: center;
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
-    /* margin-top: 50px; */
 }
 .code-section ol{
     margin-top: 39px;
-    /* border: 2px solid red; */
+}
+.code-section ol h2{
+    display: flex;
+    justify-content: center;
+}
+.code-section ol li{
+    
+    list-style: upper-roman;
     
 }
 .code-section ol li p{
@@ -636,15 +956,14 @@ label #cancel{
 }
 .code-section .language-c{
     margin-top: 15px;
-    height: 35vh;
-    width: 60vw;
-    padding: 0px px;
+    height: 45vh;
+    width: 70vw;
+    padding: 2px 50px;
 }
 
 /* for copy button................ */
 .toolbar-item button{
     cursor: pointer; 
-    /* background-color: rgb(112, 112, 200) !important; */
     color: white !important;
     border: 1px solid rgb(112, 112, 200) !important;
     border-radius: 15px !important;
@@ -652,4 +971,6 @@ label #cancel{
 }
 .toolbar-item .copy-to-clipboard-button{
     margin-right: 14px;
-}*/
+}
+
+

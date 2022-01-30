@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sagun Basnet</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://kit.fontawesome.com/f6960c9978.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
@@ -16,49 +17,75 @@
 </head>
 
 <body>
-    <nav class="navbar" id="navbar">
-        <!-- <div class="max-widths"> -->
-                <div class="logo">
-                    <a href="index.html" >PortFo<samp>lio.</samp></a>
-                </div>
-                <div class="menu">
-                 <ul >
+    <section>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check">
+                    <i class="fas fa-bars" id="btn"></i>
+                    <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <label class="logo"><a href="index.html " >PortFo<samp>lio.</samp></a></label>
+                <ul >
                     <li><a href="index.html" >Home</a></li>
+                    <li><a href="code.html" >Code</a></li>
                     <li><a href="about.html" >About</a></li>
-                    <li><a class="current" href="contact.html" >Contact</a></li>
-                 </ul>
-                </div>
-        </div>
+                    <li><a  class="current" href="contact.html" >Contact</a></li>
+                </ul>     
         </nav>
-    <section class="contact-section">
-    <!-- <div class="container-contract">
-        <form action="https://formspree.io/f/xjvjzpva" method="POST" id="my-form">
-            <div class="form-group">
-                <label for="firstname">First Name</label>
-                <input type="text" id="firstName" name="firstName">
-            </div>
-
-            <div class="form-group">
-                <label for="lastname">Last Name</label>
-                <input type="text" id="lastName" name="lastName">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email">
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Massage</label>
-                <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
-            </div>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div> -->
-    <div id="status"></div>
     </section>
-    <footer>
+    <section class="contact" id="contact">
+        <div class="content">
+            <h2>Connect With Me</h2>
+            <br>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Itahari, <br>Sunsari,<br> Nepal</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>9812384199</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>basnetsagun8@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form id="form" onsubmit="sendEmail(); reset(); return false;">
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="" required="required" id="name">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required="required" id="email" onkeydown="validation()">
+                    <span id="text" >Email</span>
+                </div>
+                <div class="inputBox">
+                    <textarea required="required" id="message"></textarea>
+                    <span>Type your Message......</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="" value="Send">
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="footer">
         <div class="footer-content">
             <p>For movies: &nbsp;</p>
             <ul class="socials">
@@ -69,10 +96,40 @@
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>Copyright &copy; 2022 <span>Sagun Basnet</span>.</p>
+            <p>Copyright &copy; 2022 <span>Sagun Basnet</span></p>
         </div>
-    </footer>
+    </div>
+</footer>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="js/contact.js"></script>
+<script type="text/javascript">
+    function validation()
+    {
+        var form = document.getElementById("form");
+        var email = document.getElementById("email").value;
+        var text = document.getElementById("text");
+        var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
+        if (email.match(pattern)){
+            form.classList.add("valid");
+            form.classList.remove("invalid");
+            text.innerHTML = "Email"
+        }
+        else{
+            form.classList.remove("valid");
+            form.classList.add("invalid");
+            text.innerHTML = "Please Enter Valid Email";
+            text.style.color = "red";
+        }
+        if (email == "") {
+            form.classList.remove("valid");
+            form.classList.remove("invalid");
+            text.innerHTML = "";
+            text.style.color= "red";
+        }
+    }
+</script>
+</body>
 
 
 
@@ -81,3 +138,4 @@
 
     <!-- <script src="script1.js"></script> -->
 </html>
+
