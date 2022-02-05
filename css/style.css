@@ -1106,6 +1106,16 @@ label #cancel{
     font-weight: 600;
     color: rgb(112, 112, 200);
 }
+.PdfBtn{
+    margin-top: 10px;
+    width: 70px;
+    cursor: pointer;
+    background-color: rgb(112, 112, 200);
+}
+.PdfBtn a{
+    color: black;
+    font-weight: bolder;
+}
 
 /*........................................... contract Page....................................... */
 #contact{
@@ -1274,8 +1284,8 @@ footer{
     height: auto;
     width: 100%;
     font-family: "open sans";
-    margin-bottom: 0px;
-    padding-top: 5px;
+    margin-top: 40px;
+    padding-top: 8px;
     padding-bottom: 5px; 
     color: white;   
 }
@@ -1362,6 +1372,9 @@ footer{
     #home .max-width .home-content .text-3{
         font-size: 26px;
         width: 100vw;
+    }
+    .PdfBtn{
+        margin-top: 40px;
     }
 
 
@@ -1811,7 +1824,13 @@ footer{
     .code-section .language-c{
         width: 85vw !important;
     }
+    .code-section ol{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .code-section ol h2{
+        width: 90%;
         display: flex;
         justify-content: center;
     }
@@ -1922,11 +1941,16 @@ footer{
     width: 100%;
 }
 .code-section ol{
+    display: flex;
+    flex-direction: column;
     margin-top: 39px;
+    align-items: center;
 }
 .code-section ol h2{
+    width: 90%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .code-section ol li{
     
@@ -1938,7 +1962,7 @@ footer{
 }
 .code-section .language-c{
     margin-top: 15px;
-    height: 35vh;
+    height: 45vh;
     width: 70vw;
     padding: 2px 50px;
 }
