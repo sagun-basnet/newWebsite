@@ -98,9 +98,6 @@ label #cancel{
     /* align-items: center; */
     font-family: 'Ubuntu',sans-serif;
 }
-#home .home-content:hover{
-    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
-}
 
 #home .home-content .text-1{
     display: flex;
