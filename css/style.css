@@ -129,6 +129,7 @@ label #cancel{
     color: rgb(112, 112, 200);
 }
 .PdfBtn{
+    border-radius: 10%;
     margin-top: 20px;
     width: 80px;
     background-color: rgb(112, 112, 200);
