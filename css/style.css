@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 :root{
-    --primary-color: rgb(112,112,200);
+    --special-color: rgb(112,112,200);
+    --black-color: #111;
+    --white-color: #fff;
+    --background-color: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+
+    /* --background-color: #111;
+    --black-color: #fff;
+    --white-color: #111; */
+}
+.darkTheme{
+    --background-color: #111;
+    --black-color: #fff;
+    --white-color: #111;
 }
 *{
     margin: 0%;
@@ -12,6 +24,7 @@
 body{
     width: 100%;
     height: 100vh;
+    /*background: var(--background-color); */
 }
 
 nav{
@@ -51,17 +64,17 @@ nav ul li a{
     font-weight: 500;
 }
 nav  li a:hover{
-    color: var(--primary-color);
+    color: var(--special-color);
 }
 nav  .current{
-    color: var(--primary-color);
+    color: var(--special-color);
 }
 samp{
-    color: var(--primary-color);
+    color: var(--special-color);
 }
 label #btn,
 label #cancel{
-    color: white;
+    color: #fff;
     font-size: 25px;
     float: right;
     line-height: 60px;
@@ -75,26 +88,46 @@ label #cancel{
 
 
 /* Home section.......................................... */
-#home{
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#home .darkMode{
+    /* border: 2px solid black; */
     width: 100%;
-    min-height: 100vh;
-    color: black;
-    font-family: 'ubuntu', sans-serif;
-}
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
 
-#home .home-content{
+}
+#home .darkMode p{
+    font-size: 18px;
+    font-weight: bolder;
+    padding-right: 8px;
+}
+#home{
+    /* background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url(../assets/img/1644288797921-min.jpg); */
+    /* background: url(../assets/img/1644288797921-min.jpg); */
+    /* background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.6) 100%),url(../assets/img/1644288797921-min.jpg); */
+    background-size: 100% 100%;background-attachment: fixed;
+    /*  */
+   background: var(--background-color);
     display: flex;
     flex-direction: column;
-    width: 60vw;
-    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    color: var(--black-color);
+    font-family: 'ubuntu', sans-serif;
+}
+#home .home-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     padding: 50px;
+    /* border: 2px solid black; */
     /* box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2); */
     /* position: relative; */
     /* top: 100px; */
@@ -126,25 +159,61 @@ label #cancel{
 }
 #home .home-content .text-3 span{
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--special-color);
 }
+.homePdf{
+    /* border: 2px solid black; */
+    display: flex;
+    /* width: 80vw; */
+    width: 100%;
+    align-items: center;
+    height: 80px;
+    justify-content: center;
+}
+.homePdf .Pdf{
+    margin-right: 200px;
+}
+
 .PdfBtn{
-    border: 2px solid black;
+    border: 2px solid var(--black-color);
     border-radius: 10%;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     width: 80px;
-    background-color: var(--primary-color);
+    background-color: var(--special-color);
     cursor: pointer;
 }
+.PdfBtn:hover{
+    background-color: rgb(112,133,200);
+    width: 89px;
+    height: 60px;
+}
 .PdfBtn a{
-    color: black;
+   color: var(--black-color);
+    font-weight: bolder;
+}
+.homePdf .project{
+    border: 2px solid var(--black-color);
+    border-radius: 10%;
+    /* margin-top: 20px; */
+    width: 80px;
+    background-color: var(--special-color);
+    cursor: pointer;
+}
+.homePdf .project:hover{
+    border: 3px solid black;
+    background-color: rgb(112,133,200);
+    width: 89px;
+    height: 60px;
+}
+.homePdf .proBtn a{
+    color: var(--black-color);
     font-weight: bolder;
 }
 
 /*........................................... contract Page....................................... */
 #contact{
-    /* z-index: -2; */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    
+   background: var(--background-color);
     position: relative;
     min-height: 100vh;
     width: 100%;
@@ -162,11 +231,7 @@ label #cancel{
     font-size: 36px;
     font-weight: 800;
     /* text-decoration: underline; */
-    color: #111;
-}
-#contact .content p{
-    font-weight: 300;
-    color: #111;
+   color: var(--black-color);
 }
 .container{
     width: 100%;
@@ -193,19 +258,19 @@ label #cancel{
     align-items: center;
     border-radius: 50%;
     font-size: 24px;
-    background: white;
+    background: #fff;
 }
 .container .contactInfo .box .text{
     display: flex;
     margin-left: 20px;
-    color: #111;
+   color: var(--black-color);
     flex-direction: column;
     font-weight: 300;
 }
 .container .contactInfo .box  .text  h3{
     font-size: 20px;
     font-weight: 800;
-    color: var(--primary-color);
+    color: var(--special-color);
 }
 .contactForm{
     /* height: 60vh; */
@@ -217,7 +282,7 @@ label #cancel{
 }
 .contactForm h2{
     font-size: 30px;
-    color: #111;
+   color: #111;
     font-weight: 800;
 }
 .contactForm .inputBox{
@@ -260,8 +325,8 @@ label #cancel{
 }
 .contactForm .inputBox input[type="submit"]{
     width: 100px;
-    background: var(--primary-color);
-    color: #fff;
+    background: var(--special-color);
+   color: var(--white-color);
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -308,10 +373,12 @@ footer{
     height: auto;
     width: 100%;
     font-family: "open sans";
-    /* margin-top: 40px; */
     padding-top: 8px;
     padding-bottom: 5px; 
-    color: white;   
+   color: #fff;   
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 .footer-content{
     display: flex;
@@ -322,7 +389,7 @@ footer{
     padding: 0px;
 }
 .footer-content p{
-    color: var(--primary-color);
+    color: var(--special-color);
     max-width: 500px;
     line-height: 28px;
     font-size: 22px;
@@ -340,10 +407,10 @@ footer{
 
 .footer-content .socials li a{
     font-size: 20px;
-    color: #fff;
+   color: #fff;
 }
 .footer-content .socials li a:hover{
-    color: var(--primary-color);
+    color: var(--special-color);
 }
 .footer-bottom{
     display: flex;
@@ -359,7 +426,7 @@ footer{
     font-weight: bolder;
 }
 .footer-bottom p span{
-    color: var(--primary-color);
+    color: var(--special-color);
     font-size: 22px;
 }
 
@@ -368,10 +435,33 @@ footer{
 
 @media (max-width: 450px){    
 
-    /* ..................................................home section.................. */
+    /* ..................................................sshome section.................. */
     .home{
         display: flex;
     }
+    #home .darkMode{
+        padding-right: 10px;
+    }
+    #home .darkMode .switch {
+        position: relative;
+        display: inline-block;
+        width: 45px;
+        height: 24px;
+    }
+    #home .darkMode .switch .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    #home .darkMode .switch input:checked + .slider:before {
+        transform: translateX(21px);
+      }
     #home .max-width{
         display: flex;
         justify-content: center;
@@ -396,6 +486,12 @@ footer{
     #home .max-width .home-content .text-3{
         font-size: 26px;
         width: 100vw;
+    }
+    #home .darkMode p{
+        font-size: 14px;
+    }
+    .homePdf .Pdf{
+        margin-right: 50px;
     }
 
 
@@ -498,7 +594,7 @@ footer{
     
     #about .about-width .skills{
         font-size: 16px;
-        z-index: -1 !important;
+        /* z-index: -1 !important;s */
         box-shadow: none !important;
         width: 100%;
         margin-top: 10px !important;
@@ -680,7 +776,7 @@ footer{
     }
     
     #about .about-width .skills{
-        z-index: -1 !important;
+        /* z-index: -1 !important; */
         box-shadow: none !important;
         width: 100%;
         margin-top: 10px !important;
@@ -839,7 +935,7 @@ footer{
     }
     /* ....................................for about..............................................  */
     #about .skills{
-        z-index: 0;
+        /* z-index: 0; */
     }
     /* ========================for code==================== */
     .code-section .language-c{
@@ -863,9 +959,10 @@ footer{
 
 /* .......................................about section........................................... */
 #about{
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    
+   background: var(--background-color);
     background-size: 100%;
-    color: #111;
+   color: var(--black-color);
     min-height: 100vh;
     width: 100%;
     /* background-color: #fff; */
@@ -892,13 +989,6 @@ footer{
     width: 52%;
     font-size: 19px;
 }
-#about .about-content1:hover{
-    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-left: 50px;
-    padding-bottom: 15px;
-}
 #about .skills{
     position: relative;
     float: right;
@@ -908,13 +998,7 @@ footer{
     width: 52%;
     font-size: 19px;
 }
-#about .skills:hover{
-    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
-    margin-right: 15px;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-}
+
 
 #about .skills .right .line{
     margin-bottom: 15px;
@@ -929,7 +1013,7 @@ footer{
     font-size: 19px;
 }
 #about .skills .right .bars{
-    background-color: black;
+    background-color: var(--black-color);
     height: 5px;
     width: 100%;
 }
@@ -937,7 +1021,7 @@ footer{
     content:"";
     position: absolute;
     height: 5px;
-    background-color: var(--primary-color);
+    background-color: var(--special-color);
 }
 #about .skills .right .html::before{
     width: 75%;
@@ -955,7 +1039,8 @@ footer{
  
 /* code section........................... */
 .code-section{
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    
+   background: var(--background-color);
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -968,6 +1053,7 @@ footer{
     align-items: center;
 }
 .code-section ol h2{
+    color: var(--black-color);
     width: 90%;
     display: flex;
     justify-content: center;
@@ -991,8 +1077,8 @@ footer{
 /* for copy button................ */
 .toolbar-item button{
     cursor: pointer; 
-    color: white !important;
-    border: 1px solid var(--primary-color) !important;
+   color: #fff !important;
+    border: 1px solid var(--special-color) !important;
     border-radius: 15px !important;
     padding: 0px 14px !important;
 }
@@ -1001,4 +1087,210 @@ footer{
     margin-top: 18px;
 }
 
+/* ================================================================ */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--special-color);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--special-color);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/* #icon{
+    width: 30px;
+    cursor: pointer;
+} */
+/* ============project section============================================== */
+main{
+    height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.glass{
+    z-index: 100;
+    background: white;
+    height: 80%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+}
+.circle1,.circle2{
+    /* background: white; */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    z-index: 1;
+    border-radius: 2rem;
+}
+.circle1{
+    /* background: red; */
+    top: 2%;
+    right: 5%;
+}
+.circle2{
+    bottom: 5%;
+    left: 5%;
+}
+/* ====================================================== */
+.heading{
+    /* border: 2px solid black; */
+    height: 50%;
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading h1{
+    /* text-decoration: underline; */
+    color: black;
+    font-weight: bold;
 
+}
+.project__views{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.project__container1{
+    height: 250px;
+    width: 250px;
+    
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3)),url(../assets/img/Screenshot1644288797921-min.jpg);
+    background-size: 100% 100%;
+    margin: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  
+}
+.project__container1:hover{
+    transform: rotateY(180deg);
+}
+.project__container2{
+    height: 250px;
+    width: 250px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3)),url(../assets/img/Screenshot\ 2022-02-08\ 132400.jpg);
+    background-size: 100% 100%;
+    margin: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  
+  }
+  .project__container2:hover{
+    transform: rotateY(180deg);
+  }
+.project__container3{
+    height: 250px;
+    width: 250px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3)),url(../assets/img/Screenshot\ 2022-02-04\ 210307.jpg);
+    background-size: 100% 100%;
+    margin: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  
+  }
+  .project__container3:hover{
+    transform: rotateY(180deg);
+  }
+  
+  .theBack{
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+  }
+  .theBack .view__button{
+    /* width: 100%; */
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .theBack .view__button a{
+    text-decoration: none;
+    height: 20px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-right: 40px;
+    margin-left: 40px; 
+  }
+  .theBack .view__button a:hover{
+    height: 22px;
+    width: 45px;
+  }
+  .detail__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    text-align: centerss;
+    padding: 0 5px;
+    font-weight: 550;
+  }
