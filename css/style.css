@@ -147,7 +147,7 @@ label #cancel{
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: 70px;
+    font-size: 40px;
     font-weight: 600;
 }
 #home .home-content .text-3{
@@ -435,7 +435,7 @@ footer{
 
 @media (max-width: 450px){    
 
-    /* ..................................................sshome section.................. */
+    /* ..................................................for home section.................. */
     .home{
         display: flex;
     }
@@ -480,7 +480,7 @@ footer{
         width: 100vw;
     }
     #home .max-width .home-content .text-2{
-        font-size: 22px;
+        font-size: 24px;
         width: 100vw;
     }
     #home .max-width .home-content .text-3{
@@ -619,6 +619,7 @@ footer{
         }
         .code-section .language-c{
             width: 95vw !important;
+            padding: 0px 20px !important;
         }
         .code-section code{
             font-size: 12px;
@@ -1059,13 +1060,11 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.code-section ol li{
-    
-    list-style: upper-roman;
-    
-}
 .code-section ol li p{
     margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
 }
 .code-section .language-c{
     margin-top: 15px;
