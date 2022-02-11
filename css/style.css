@@ -602,6 +602,17 @@ footer{
         font-weight: 300 !important;
     }
         /* ========================for code=================== */
+        .code-section input{
+            padding: 0 20px !important;
+            margin: 20px 0 !important;
+            width: 50% !important;
+            right: 20px !important;
+            font-size: 15px !important;
+         }
+         .code-section ol{
+            margin-top: 60px !important;
+            margin-bottom: 30px !important;
+        }
         .code-section ol h2{
             display: flex;
             justify-content: center;
@@ -779,6 +790,17 @@ footer{
         margin-bottom: 40px !important;
     }
     /* ========================for code=================== */
+    .code-section input{
+        padding: 0 20px !important;
+        margin: 20px 0 !important;
+        width: 60% !important;
+        right: 20px !important;
+        font-size: 17px !important;
+     }
+     .code-section ol{
+        margin-top: 60px !important;
+        margin-bottom: 30px !important;
+    }
     .code-section ol h2{
         display: flex;
         justify-content: center;
@@ -929,6 +951,17 @@ footer{
         /* z-index: 0; */
     }
     /* ========================for code==================== */
+    .code-section input{
+        padding: 0 20px !important;
+        margin: 20px 0 !important;
+        width: 55% !important;
+        right: 20px !important;
+        font-size: 19px !important;
+     }
+     .code-section ol{
+        margin-top: 60px !important;
+        margin-bottom: 30px !important;
+    }
     .code-section .language-c{
         width: 85vw !important;
     }
@@ -1031,49 +1064,67 @@ footer{
 /* code section........................... */
 .code-section{
     
-   background: var(--background-color);
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
+    background: var(--background-color);
+   display: flex;
+   flex-direction: column;
+   /* justify-content: end; */
+   align-items: center;
+   min-height: 100vh;
+   width: 100%;
+}
+.code-section input{
+  background-color: rgb(39, 37, 37);
+  padding: 0 30px;
+  margin: 30px 0;
+  width: 40%;
+  height: 40px;
+  color: white;
+  position: absolute;
+  right: 30px;
+  font-size: 19px;
 }
 .code-section ol{
-    display: flex;
-    flex-direction: column;
-    margin-top: 39px;
-    align-items: center;
+   display: flex;
+   flex-direction: column;
+   margin-top: 100px;
+   margin-bottom: 50px;
+   align-items: center;
 }
 .code-section ol h2{
-    color: var(--black-color);
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   color: var(--black-color);
+   width: 90%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+   padding-left: 30px;
+   padding-right: 30px;
+   text-align: justify;
 }
-.code-section ol li p{
-    margin-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    text-align: justify;
-}
+/* .code-section ol p{
+   margin-top: 20px;
+   padding-left: 30px;
+   padding-right: 30px;
+   text-align: justify;
+} */
 .code-section .language-c{
-    margin-top: 15px;
-    height: 45vh;
-    width: 70vw;
-    padding: 2px 50px;
+   margin-top: 15px;
+   height: 45vh;
+   width: 70vw;
+   padding: 2px 50px;
 }
 
 /* for copy button................ */
 .toolbar-item button{
-    cursor: pointer; 
-   color: #fff !important;
-    border: 1px solid var(--special-color) !important;
-    border-radius: 15px !important;
-    padding: 0px 14px !important;
+   cursor: pointer; 
+  color: #fff !important;
+   border: 1px solid var(--special-color) !important;
+   border-radius: 15px !important;
+   padding: 0px 14px !important;
 }
 .toolbar-item .copy-to-clipboard-button{
-    margin-right: 14px;
-    margin-top: 18px;
+   margin-right: 14px;
+   margin-top: 18px;
 }
 
 /* ================================================================ */

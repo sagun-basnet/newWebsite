@@ -36,7 +36,8 @@
         </nav>
     </section>
     <div class="code-section">
-        <ol>
+        <input type="text" name="" id="myInput" placeholder="Search.." onkeyup="searchFun();">
+        <ol id="myOl">
             <h2><li><p>Basic of C program:- comment and print function.</p></h2>
                 <pre class="language-c">
                 <code>
@@ -403,5 +404,39 @@ int main()
 
 
     <script src="js/darkmode.js"></script>
+    <script>
+        const searchFun = () =>{
+            let filter = document.getElementById('myInput').value.toUpperCase();
+            // let pre = document.getElementById('pre').value;
+            let ol = document.getElementById('myOl');
+            // let h2 = ol.getElementsByTagName('h2');
+            let li = ol.getElementsByTagName('li');
+            let pre = ol.getElementsByTagName('pre');
+
+            for(var i=0; i<li.length; i++){
+                let a = li[i].getElementsByTagName('p')[0];
+
+                let textValue = a.textContent || a.innerHTML;
+
+                if(textValue.toUpperCase().indexOf(filter) > -1){
+                    li[i].style.display = '';
+                }else{
+                    li[i].style.display = 'none';
+                }
+                let b = pre[i].getElementsByTagName('code')[0];
+
+                if(textValue.toUpperCase().indexOf(filter) > -1){
+                    pre[i].style.display = '';
+                }else{
+                    pre[i].style.display = 'none';
+                }
+            }
+            // for(var i = 0 ; i<pre.length; i++){
+            //     let b = pre[i].getElementsByTagName('code')[0];
+
+
+            // }
+        }
+    </script>
 </html>
 
